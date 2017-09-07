@@ -2,14 +2,41 @@ package calculadora;
 
 public class Calculadora {
 	
-	public static int suma(int a, int b) {
-		
-		return a+b;
+	private int ans;
+	
+	public Calculadora() {
+		ans=0;
 	}
 	
-	public static int resta(int a, int b) {
+	public int suma(int a, int b) {
 		
-		return a-b;
+		ans=a+b;
+		return ans;
+	}
+	
+	public int resta(int a, int b) {
+		
+		ans=a-b;
+		return ans;
+	}
+	
+	public int suma(int v) {
+		ans+=v;
+		return ans;
+	}
+	
+	public int resta(int v) {
+		ans-=v;
+		return ans;
+	}
+	
+	public int ans() {
+		
+		return ans;
+	}
+	
+	public void clear() {
+		ans=0;
 	}
 
 }
