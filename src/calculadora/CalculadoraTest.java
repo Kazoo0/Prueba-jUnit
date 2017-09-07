@@ -39,4 +39,22 @@ public class CalculadoraTest {
 		int esperado = 5;
 		assertEquals(esperado,resultado);
 	}
+	
+	@Test
+	public void testDiv() {
+		calc.div(4, 2);
+		int resultado= calc.ans();
+		int esperado = 2;
+		assertEquals(esperado,resultado);
+	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testDivPorCero() {
+		calc.div(4, 0);
+	}
+	
+	@Test(timeout=100)
+	public void testAlgoritmoOptimo() {
+		calc.operacionOptima();
+	}
 }

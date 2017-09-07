@@ -38,5 +38,21 @@ public class Calculadora {
 	public void clear() {
 		ans=0;
 	}
+	
+	public int div (int a, int b) {
+		if(b == 0) {
+			throw new ArithmeticException("No se puede dividir por cero");
+		}
+		ans= a / b;
+		return ans;
+	}
+	
+	public void operacionOptima() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+		}
+	}
 
 }
